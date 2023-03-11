@@ -15,12 +15,12 @@
 
 main {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
 #hero {
-  height: 1200px;
+  padding-top: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -28,20 +28,15 @@ main {
   flex-direction: column;
 }
 
-
 header {
   width: 80%;
-  max-width: 1200px;
-  background: #a8a61d00;
-
   display: grid;
-  grid-template-columns: 200px 400px 200px;
-  justify-content: space-around;
+  grid-template-columns: 25% 40% 25%;
+  justify-content: space-between;
   align-items: center;
-  gap: 8rem;
+  gap: 5%;
 
   transition: .5s ease;
-  
 }
 
 header.sticky {
@@ -64,8 +59,14 @@ header.sticky .container-logo img {
   width: 100px;
 }
 
+.container-logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .container-logo img {
-  width: 150px;
+  width: 60%;
 }
 
 nav {
@@ -99,7 +100,7 @@ a {
   height: 2px;
   border-radius: 100px;
   background: var(--gradient);
-  opacity: .5;
+  opacity: .8;
   transition: .2s ease;
 }
 
@@ -147,20 +148,25 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  height: 450px;
+  
   margin-bottom: 5rem;
+  transition: .2s;
 }
 
 .hero-img {
   width: 50%;
+  height: 450px;
   z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-img img {
   width: 1200px;
   position: relative;
-  top: 8rem;
-  right: 20rem;
+  top: 10rem;
   animation: move 10s infinite ease-in-out;
 }
 
@@ -188,7 +194,8 @@ a:hover {
 }
 
 .hero-text h1 {
-  line-height: 60px;
+  width: 90%;
+  line-height: 110%;
   font-size: 3rem;
   color: var(--light);
   font-weight: 200;
@@ -201,7 +208,7 @@ a:hover {
 }
 
 .btn {
-  width: 35%;
+  width: 200px;
   background-color: var(--purple);
   color: var(--light);
   font-weight: 300;
@@ -232,6 +239,90 @@ a:hover {
   transform: rotate(360deg);
 }
 
+#small-login{
+  display: none;
+  background-color: #adadad15;
+  color: #f5e65b;
+
+  width: 12px;
+  height: 10px;
+  padding: 8px;
+
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+#small-login:hover{
+  background-color: var(--yellow);
+  color: var(--bg-color);
+}
+
+
+@media screen and (max-width: 720px){
+  header{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header.sticky{
+    display: none;
+  }
+
+ 
+  .container-logo img{
+    width: 80px;
+  }
+  
+  .hero-content{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text{
+    text-align: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .hero-text h1{
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .hero-img{
+    height: 200px;  
+  }
+
+  .hero-img img{
+    width: 500px;
+    top: 0;
+  }
+
+  .btn{
+    width: 120px;
+    font-size: .7rem;
+  }
+
+  .btn:hover{
+    width: 130px;
+  }
+
+  nav, 
+  .login-button{
+    display: none;
+  }
+
+  #small-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
 /* ---- Vantagens -------*/
 
 .benefits-content {
@@ -342,6 +433,7 @@ a:hover {
   backdrop-filter: blur(20px);
   border-radius: 10px;
   height: 150px;
+  max-height: 200px;
 
   display: flex;
   flex-direction: column;
@@ -358,8 +450,45 @@ a:hover {
 .card p {
   color: white;
   font-weight: 200;
-  line-height: 25px;
-  font-size: 1rem;
+  line-height: 150%;
+  font-size: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .title{
+    font-size: 1rem;
+  }
+
+  .box-cards{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    grid-template-columns: 250px 250px 250px;
+  }
+  
+  .card-content{
+    scroll-snap-align: center;
+  }
+
+  .card-content img{
+    height: 100px;
+    top: 1rem;
+  }
+
+  .card-content:hover img{
+    height: 110px;
+  }
+
+  .card{
+    height: 180px;
+  }
+
+  .card p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
 }
 
 /* --- Atuaçao ---*/
@@ -371,7 +500,6 @@ a:hover {
   align-items: center;
   margin-bottom: 5rem;
   padding: 5rem 0 2rem 0;
-
 }
 
 #working .bar {
@@ -379,6 +507,13 @@ a:hover {
   height: 400px;
   border-radius: 100px;
   padding: 0.3rem;
+}
+
+.container-working{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container-img {
@@ -392,7 +527,7 @@ a:hover {
 }
 
 .container-img img {
-  width: 400px;
+  width: 140%;
   position: relative;
   top: 1px;
   animation: side-move 5s infinite ease-in-out;
@@ -413,7 +548,7 @@ a:hover {
 }
 
 .info {
-  width: 35%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -425,6 +560,33 @@ a:hover {
   color: var(--light);
   font-size: 1.5rem;
   font-weight: 200;
+}
+
+@media screen and (max-width: 720px) {
+  .container-working{
+    width: 80%;
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
+
+  .container-img{
+    height: 100px;
+    width: 100%;
+  }
+
+  .container-img img{
+    width: 150px;
+  }
+
+  .info{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .info p{
+    font-size: 1rem;
+  }
 }
 
 /* --- Services --- */
@@ -684,3 +846,10 @@ footer {
 .copyright .content {
   padding: 2rem 0;
 }
+
+@media screen and (max-width: 720px) {
+  .title{
+    font-size: 1rem;
+  }
+}
+

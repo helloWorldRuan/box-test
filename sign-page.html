@@ -25,7 +25,7 @@
         <div class="blur purple"></div>
       </div>
     </div>
-    
+
     <div class="logo-container">
       <a href="index.html">
         <img src="./assets/logo.png" alt="">
@@ -33,65 +33,98 @@
     </div>
 
     <div class="form-container">
-      <div class="text-container">
-        <h5>comece agora</h5>
-        <h1>Crie uma conta</h1>
-        <p>Já tem conta? Faça <span>login.</span></p>
-      </div>
+      <div class="form-content login">
+        <div class="text-container">
+          <h5>de volta ao trabalho</h5>
+          <h1>Bem vindo</h1>
+          <p>Ainda não é cadastrado? Crie sua <span onclick="toggleFormVisibility()">conta</span></p>
+        </div>
 
-      <div class="form">
-        <div class="input-line">
+        <div class="form">
 
-          <!-- Nome input -->
+          <!-- Email input -->
           <div class="input-field">
-            <input required type="text" id="in_email">
-            <label for="in_email">nome</label>
+            <input required type="text" id="in_email_login">
+            <label for="in_email">email</label>
             <div class="icon">
-              <i class="ph-user"></i>
+              <i class="ph-envelope-simple"></i>
             </div>
           </div>
 
-          <!-- Cargo input -->
+          <!-- Senha input -->
           <div class="input-field">
-            <input required type="text" id="in_email">
-            <label for="in_email">cargo</label>
-            <div class="icon">
-              <i class="ph-briefcase"></i>
+            <input required type="password" id="in_password_login">
+            <label for="in_email">senha</label>
+            <div class="icon" id="pass_eye" onclick="togglePassVisibility()">
+              <i class="ph-eye" id="ph-eye"></i>
+            </div>
+          </div>
+
+          <button onclick="signIn()">ENTRAR</button>
+        </div>
+      </div>
+
+      <div class="form-content cadastro">
+        <div class="text-container">
+          <h5>comece agora</h5>
+          <h1>Crie uma conta</h1>
+          <p>Já tem conta? Faça <span onclick="toggleFormVisibility()">login.</span></p>
+        </div>
+
+        <div class="form">
+          <div class="input-line">
+
+            <!-- Nome input -->
+            <div class="input-field">
+              <input required type="text" id="in_name" maxlength="25">
+              <label for="in_name">nome</label>
+              <div class="icon">
+                <i class="ph-user"></i>
+              </div>
             </div>
 
-          </div>
-        </div>
+            <!-- Cargo input -->
+            <div class="input-field">
+              <input required type="text" id="in_office">
+              <label for="in_office">cargo</label>
+              <div class="icon">
+                <i class="ph-briefcase"></i>
+              </div>
 
-        <!-- Email input -->
-        <div class="input-field">
-          <input required type="text" id="in_email">
-          <label for="in_email">email</label>
-          <div class="icon">
-            <i class="ph-envelope-simple"></i>
+            </div>
           </div>
-        </div>
 
-        <!-- Senha input -->
-        <div class="input-field">
-          <input required type="password" id="in_password">
-          <label for="in_email">senha</label>
-          <div class="icon" id="pass_eye" onclick="togglePassVisibility()">
-            <i class="ph-eye" id="ph-eye"></i>
+          <!-- Email input -->
+          <div class="input-field">
+            <input required type="text" id="in_email">
+            <label for="in_email">email</label>
+            <div class="icon">
+              <i class="ph-envelope-simple"></i>
+            </div>
           </div>
-        </div>
 
-        <button onclick="signUp()">CADASTRAR</button>
+          <!-- Senha input -->
+          <div class="input-field">
+            <input required type="password" id="in_password">
+            <label for="in_password">senha</label>
+            <div class="icon" id="pass_eye" onclick="togglePassVisibility()">
+              <i class="ph-eye" id="ph-eye"></i>
+            </div>
+          </div>
+
+          <button onclick="signUp()">CADASTRAR</button>
+        </div>
       </div>
     </div>
 
-    <div class="progress">
+
+    <!-- <div class="progress">
       <div class="ball"></div>
       <div class="ball"></div>
       <div class="ball"></div>
-    </div>
+    </div> -->
   </main>
 
 </body>
 
 </html>
-

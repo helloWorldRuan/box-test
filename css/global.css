@@ -11,7 +11,7 @@
 	--bar-gradient: linear-gradient(71.38deg, rgba(74, 48, 147, 0.5) 0%, rgba(245, 230, 91, 0.5) 147.42%);
   }
 
-::-webkit-scrollbar {
+  ::-webkit-scrollbar {
 	background-color: #2d2c2c;
 	width: 5px;
 }
@@ -23,13 +23,14 @@
 
 .blur-effects{
 	width: 100%;
-	max-width: 1600px;
+	max-width: 1920px;
 	position: absolute;
 	z-index: -1000;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	overflow: hidden;
 
 }
 

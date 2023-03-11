@@ -54,18 +54,20 @@
             LOGIN
           </button>
         </div>
+
+        <i class="ph-sign-in" id="small-login" onclick="redirectToLogin()"></i>
       </header>
+
 
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="revealGeneral">
-            A segurança da sua <br />
-            máquina é nossa <br />
-            <span> responsabilidade.</span>
+            Monitorar bem, para que você opere
+            <span> melhor ainda.</span>
           </h1>
 
-          <a href="#working" >
-            <button class="btn revealGeneral">
+          <a href="#working" class="revealGeneral">
+            <button class="btn ">
               <i class="ph-rocket-launch"></i>
               Saiba mais
               <div class="fill"></div>
@@ -87,7 +89,7 @@
             <div class="card">
               <p>
                 Identificamos problemas de desempenho ou falhas antes que se tornem graves,
-                permitindo que sejam tomadas medidas corretivas para melhorar a eficiência e 
+                permitindo que sejam tomadas medidas corretivas para melhorar a eficiência e
                 reduzir o tempo de inatividade.
               </p>
             </div>
@@ -97,8 +99,8 @@
             <img src="./assets/benefits-custos.png" alt="" />
             <div class="card">
               <p>
-                Monitorar máquinas pode ajudar a identificar áreas onde os custos podem 
-                ser reduzidos, seja através da otimização da manutenção, redução do consumo 
+                Monitorar máquinas pode ajudar a identificar áreas onde os custos podem
+                ser reduzidos, seja através da otimização da manutenção, redução do consumo
                 de energia ou melhorias de processos.
             </div>
           </div>
@@ -107,8 +109,8 @@
             <img src="./assets/benefits-acertividade.png" alt="" />
             <div class="card">
               <p>
-                O monitoramento de máquinas fornece dados em tempo real, permitindo que 
-                os gestores tomem decisões mais informadas e precisas sobre manutenção preditiva, 
+                O monitoramento de máquinas fornece dados em tempo real, permitindo que
+                os gestores tomem decisões mais informadas e precisas sobre manutenção preditiva,
                 produção e investimentos.
               </p>
             </div>
@@ -119,16 +121,21 @@
 
     <section id="working">
       <div class="bar"></div>
-      <div class="container-img">
-        <img src="./assets/dev-in-computer.png" alt="desenvolvedor" />
+
+      <div class="container-working">
+        <div class="container-img">
+          <img src="./assets/dev-in-computer.png" alt="desenvolvedor" />
+        </div>
+        <div class="info">
+          <div class="title revealGeneral">Atuação</div>
+          <p class="revealGeneral">
+            Agimos monitorando sua máquina para identificar problemas em potencial e evitar interrupções não planejadas,
+            além de oferecer serviços adicionais, como monitoramento remoto e tomadas de decisões mais rápidas para
+            facilitar a manutenção preditiva.
+          </p>
+        </div>
       </div>
-      <div class="info">
-        <div class="title revealGeneral">Atuação</div>
-        <p class="revealGeneral">
-          Agimos monitorando sua máquina para identificar problemas em potencial e evitar interrupções não planejadas,
-          além de oferecer serviços adicionais, como monitoramento remoto e manutenção preditiva.
-        </p>
-      </div>
+
       <div class="bar"></div>
     </section>
 
@@ -150,7 +157,7 @@
         <img src="./assets/Dashboard.png" alt="" />
       </div>
     </section>
-    
+
     <section id="team">
       <div class="title revealHero">Equipe</div>
       <div class="team-container">
@@ -174,7 +181,8 @@
               <a href="https://www.instagram.com/malasarts.png/" target="_blank">
                 <i class="ph-instagram-logo"></i>
               </a>
-              <a href="https://www.linkedin.com/in/ruan-c-rodrigues-9b3276236/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/ruan-c-rodrigues-9b3276236/" target="_blank"
+                rel="noopener noreferrer">
                 <i class="ph-linkedin-logo"></i>
               </a>
               <a href="https://github.com/helloWorldRuan" target="_blank" rel="noopener noreferrer">
@@ -297,6 +305,7 @@
     duration: 1000,
     distance: '5rem',
     opacity: 0,
+    delay: 500
   })
 
   // Animação dos cards (Vantagens e equipe)
@@ -304,7 +313,9 @@
     duration: 1500,
     distance: '10rem',
     opacity: 0,
-    interval: 200
+    interval: 200,
+    delay: 500
+
   })
 
 </script>
